@@ -104,8 +104,12 @@ def game():
 
         # answer is incorrect
         else:
-            print(f"{user_answer}: incorrect answer")
-            ui_manager.display_answer_status(text=f"{user_answer}: incorrect answer", status="incorrect")
+            if user_answer == "":
+                print("Your answer is blank")
+                ui_manager.display_answer_status(text="Type in your answer", status="incorrect")
+            else:
+                print(f"{user_answer}: incorrect answer")
+                ui_manager.display_answer_status(text=f"{user_answer}: incorrect answer", status="incorrect")
 
         #   #   # re-prompt user answer to carry on the loop
         user_answer = turtle.textinput("50 States in USA", "Guess another state")

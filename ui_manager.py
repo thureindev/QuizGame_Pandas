@@ -42,10 +42,6 @@ class UIManager():
         self.in_game_text.write(text, move=True, align='center', font=FONT)
         self.in_game_text.hideturtle()
 
-    def clear_ui_displays(self):
-        self.status_text.clear()
-        self.score_text.clear()
-
     def display_score(self, scored=0, max_score=0):
         # clear to prevent text overlap
         self.score_text.clear()
